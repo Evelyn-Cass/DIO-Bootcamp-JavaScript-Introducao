@@ -12,7 +12,6 @@ var frase = "Japão é o melhor time do mundo";
 var n1 = 5;
 var n2 = 3;
 
-
 //alert(nome+" tem "+ idade);
 //alert(idade+idade2);
 
@@ -56,7 +55,6 @@ console.log(lista.toString());
 //Mostra a LISTA e substitui a , por /
 console.log(lista.join("/"));
 
-
 //Dicionário
 var fruta = {nome:"maça", cor:"vermelha"};
 
@@ -85,9 +83,6 @@ if (idade >= 18){
   alert("Menor de idade");
 };
 
-
-
-
 //Estruturas de repetição
 
 var count = 0;
@@ -102,7 +97,6 @@ for(count2=0; count<=5; count++){
    alert(count);
 }
 
-*/
 //DATE
 
 var d = new Date();
@@ -110,3 +104,75 @@ var d = new Date();
 //alert(d.getHours());
 //alert(d.getHours());
 alert(d.getMonth()+1); //Mês sempre conta do 0, necessário somar mais um
+
+//Aula 04
+
+//Função recebe 2 váriaveis e realiza a soma delas
+function soma(n1, n2){
+  return n1 + n2;
+}
+
+//Utiliza a função SOMA e mostra o resultado
+alert(soma(5, 10));
+
+
+//Função recebe FRASE NOME NOMENOVO e substitui o NOME por NOMENOVO dentro da FRASE
+function setReplace(frase, nome, novo_nome) {
+  return frase.replace(nome, novo_nome)
+}
+
+//Utiliza a função SETREPLACE e mostra o resultado
+alert(setReplace("Vai Japão","Japão","Brasil"));
+
+//Função recebe um IDADE e verifica se é >=18
+function validaIdade(idade){
+  var validar;
+  if (idade>=18){
+    //return true;
+    validar=true;
+  }else{
+    //return false;
+    validar=false;
+  }
+  return validar;
+}
+
+var idade = prompt("Qual sua idade?");
+console.log(validaIdade(idade));
+
+*/
+//Aula 05
+
+//Função que ao clicar no botão mostra um alerta e uma frase no navegador
+function botao(){
+  document.getElementById("Agradecimento").innerHTML = "<b>Obrigada por clicar!</b>";
+  //console.log(document.getElementById("Agradecimento"));
+  //alert("Obrigada por clicar!");
+}
+
+function redirecionar(){
+  //abre o site em uma nova janela
+  window.open("https://www.google.com/");
+  //abre o site na mesma janela
+  //window.location.href = "https://www.google.com/";
+}
+
+function trocar(elemento){
+  //alert("trocar texto");
+  //document.getElementById("Mouseover").innerHTML = "Obrigada por passar o mouse!";
+  elemento.innerHTML = "Obrigada por passar o mouse!";
+}
+
+function voltar(elemento){
+  //document.getElementById("Mouseover").innerHTML = "Passe o mouse AQUI!";
+  elemento.innerHTML = "Passe o mouse AQUI!";
+
+}
+
+function load(){
+  alert("Página carregada!");
+}
+
+function change(elemento){
+  console.log(elemento.value);
+}
